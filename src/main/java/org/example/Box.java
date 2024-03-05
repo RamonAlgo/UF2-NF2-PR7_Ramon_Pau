@@ -1,42 +1,30 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Box {
-    private int id;
-    private boolean ocupado;
-    private Paciente paciente;
+    private int numPacientes;
+    private List<Paciente> pacientes;
+    private boolean[] especialistasDisponibles;
+    private boolean[] tecnicosDisponibles;
 
-    public Box(int id) {
-        this.id = id;
-        this.ocupado = false;
-        this.paciente = null;
+    public Box() {
+        this.numPacientes = 0;
+        this.pacientes = new ArrayList<>();
+        this.especialistasDisponibles = new boolean[3]; // 3 tipos de especialistas: cirugía, traumatología, diagnóstico
+        this.tecnicosDisponibles = new boolean[3]; // 3 técnicos sanitarios
     }
 
-    public int getId() {
-        return id;
+    public void agregarPaciente(Paciente paciente) {
+
     }
 
-    public boolean isOcupado() {
-        return ocupado;
+    public void atenderPaciente(Paciente paciente) {
+
     }
 
-    public void setOcupado(boolean ocupado) {
-        this.ocupado = ocupado;
-    }
+    public void liberarBox() {
 
-    public Paciente getPaciente() {
-        return paciente;
-    }
-
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
-    }
-
-    @Override
-    public String toString() {
-        return "Box{" +
-                "id=" + id +
-                ", ocupado=" + ocupado +
-                ", paciente=" + paciente +
-                '}';
     }
 }
